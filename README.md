@@ -1,5 +1,6 @@
 # python
 py文件打包
+
 1.https://github.com/pyinstaller/pyinstaller 安装pyinstaller（由于只有开发版本支持3.0的版本，所以这里安装的是3.0版本的）
 下好后，使用命令：python setup.py install 进行安装
 
