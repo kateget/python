@@ -8,6 +8,7 @@ py文件打包
 
 3.找到用到的python依赖包 (urllib3) F:\install\python\Lib\site-packages
 放到要执行的py文件目录（注意，需要打包的py文件里面的path 路径必须使用相对路径，例如：".\\"）
+注意别忘了生成exe文件的图标，例如：cat_m.ico
 
 4.执行命令
 pyinstaller -F -w --icon=cat_m.ico exportToExcel.py
