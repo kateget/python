@@ -1,7 +1,8 @@
 # 目标：实现从文件目录拉取多语言标记中的文本，整理成excel文档
 import os,sys,pdb,os.path,re,xlwt
 # 获取当前路径
-path = sys.path[0] or os.getcwd()
+# path = sys.path[0] or os.getcwd()
+path = '.\\'
 # 1.拉取当前目录目录下的所有.shtml或者html后缀的文件
 # os.listdir(path)
 # pdb.set_trace()
@@ -26,7 +27,7 @@ def searchFile(path,fileUrlArr):
 # 查找文档中被{#  #}包裹的多语言文本
 def searchLangKey(fileUrl):
     langArr = {}
-    with open(fileUrl,'r',encoding='UTF-8') as f :
+    with open(fileUrl,'r',encoding='UTF-8',errors='ignore') as f :
         htmlString = f.read()
 
     list1 = re.findall("{#\s+(.*?)\s+#}",htmlString,re.M) 
@@ -75,3 +76,4 @@ def writeExcel(fileArr):
 # 创建入口文件
 if __name__ == '__main__':
     writeExcel(result)
+    os.system("pause")
