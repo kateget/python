@@ -17,3 +17,5 @@ pyinstaller -F -w --icon=cat_m.ico exportToExcel.py
 cx_Freeze
 下载对应蟒蛇版本的cx_freeze
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#cx_freeze
+在需要打包的文件下建的设置的的的的.py来配置打包
+执行：python setup.py build
