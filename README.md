@@ -15,3 +15,5 @@ pyinstaller -F -w --icon=cat_m.ico exportToExcel.py
 
 另外一种需要尝试的打包工具：
 cx_Freeze
+下载对应蟒蛇版本的cx_freeze
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#cx_freeze
