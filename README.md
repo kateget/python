@@ -24,3 +24,8 @@ python cxfreeze-postinstall 安装完成
 
 执行：python setup.py build 或者执行：python setup.py bdist_msi 变成可安装文件，会自动把运行所需要的包打包进去
 由于cx_freeze打包生成后的exe文件依赖于lib包，所以请在lib下运行exe文件
+
+#视频拼接打包
+用pyintaller:
+在目录（F:\install\python\Lib\site-packages\moviepy）下，打开editor.py文件
+修改editor.py文件,详情查看存入的editor.py文件
