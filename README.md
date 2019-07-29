@@ -29,3 +29,5 @@ python cxfreeze-postinstall 安装完成
 用pyintaller:
 在目录（F:\install\python\Lib\site-packages\moviepy）下，打开editor.py文件
 修改editor.py文件,详情查看存入的editor.py文件
+
+pyinstaller -F  --icon=cat_m.ico vedio_split.py
