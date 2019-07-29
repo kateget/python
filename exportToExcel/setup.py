@@ -5,6 +5,7 @@ os.environ['TCL_LIBRARY'] = "D:\install\python\tcl\tcl8.6"
 os.environ['TK_LIBRARY'] = "D:\install\python\tcl\tk8.6"
     # 被打包的程序所依赖的包
 packages = ['xlwt']
+ # 额外添加的文件  
 include_files = ['cat_m.ico']
 options = {
     'build_exe': {
@@ -13,7 +14,7 @@ options = {
     },
 
 }
-
+# 工程的 入口
 executables = [Executable(
     "D:\study\python\exportToExcel\exportToExcel.py", base=base, icon='cat_m.ico')]
 
