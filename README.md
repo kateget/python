@@ -17,5 +17,9 @@ pyinstaller -F -w --icon=cat_m.ico exportToExcel.py
 cx_Freeze
 下载对应蟒蛇版本的cx_freeze
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#cx_freeze
+执行：pip install cx_Freeze-5.1.1-cp37-cp37m-win_amd64.whl 安装cx_freeze
+打开命令行，cd 到 Python 脚本目录（F:\install\python\Scripts）下，执行：
+python cxfreeze-postinstall 安装完成
 在需要打包的文件下建的设置的的的的.py来配置打包
+
 执行：python setup.py build
