@@ -30,7 +30,7 @@ def searchLangKey(fileUrl):
     with open(fileUrl,'r',encoding='UTF-8',errors='ignore') as f :
         htmlString = f.read()
 
-    list1 = re.findall("{#\s+(.*?)\s+#}",htmlString,re.M) 
+    list1 = re.findall("(?<={#\s)(.*?)(?=\s#})",htmlString,re.M) 
     return list1
 
 fileUrlArr = searchFile(path,[])
