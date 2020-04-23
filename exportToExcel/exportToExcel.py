@@ -28,9 +28,11 @@ def searchFile(path,fileUrlArr):
 def searchLangKey(fileUrl):
     langArr = {}
     with open(fileUrl,'r',encoding='UTF-8',errors='ignore') as f :
-        htmlString = f.read()
+        # htmlString = f.read()
+        # 去除翻译文本中超过2个及其以上的空格
+        htmlString = re.sub("[\s]{2,}"," ",f.read())
 
-    list1 = re.findall("(?<={#\s)(.*?)(?=\s#})",htmlString,re.M) 
+    list1 = re.findall("(?<={#\s)([\s\S]*?)(?=\s#})",htmlString,re.M) 
     return list1
 
 fileUrlArr = searchFile(path,[])
@@ -71,7 +73,7 @@ def writeExcel(fileArr):
         workSheet.write(mIndex,0,fileArr[mIndex])
 
     # 保存
-    workbook.save('i18n.xlsx')
+    workbook.save('i18n.xls')
 
 # 创建入口文件
 if __name__ == '__main__':
